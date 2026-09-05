@@ -7,7 +7,7 @@ class tb_driver extends uvm_driver;
 
   virtual function void build_phase(uvm_phase phase);
     super.build_phase(phase);
-    `uvm_info("drvrun", "driver on", UVM_FULL)
+    `uvm_info("drvrun", "driver on", UVM_NONE)
   endfunction
 
   virtual task run_phase(uvm_phase phase);

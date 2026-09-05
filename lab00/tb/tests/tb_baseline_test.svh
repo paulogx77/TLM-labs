@@ -9,9 +9,11 @@ class tb_baseline_test extends uvm_test;
 
   virtual function void build_phase(uvm_phase phase);
     super.build_phase(phase);
-
     env = tb_env::type_id::create("env", this);
   endfunction
 
-
+  virtual function void end_of_elaboration_phase(uvm_phase phase);
+    super.end_of_elaboration_phase(phase);
+    uvm_top.print_topology();
+  endfunction
 endclass
