@@ -9,9 +9,11 @@ class tb_agent extends uvm_agent;
     super.new(name, parent);
   endfunction
 
-  function build_phase(uvm_phase phase);
+  virtual function void build_phase(uvm_phase phase);
     super.build_phase(phase);
 
-    mon = create::
+    sqr = tb_sequencer::type_id::create("sqr", this);
+    drv = tb_driver::type_id::create("drv", this);
+    mon = tb_monitor::type_id::create("mon", this);
   endfunction
 endclass

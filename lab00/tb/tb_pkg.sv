@@ -1,6 +1,6 @@
 package tb_pkg;
-  import uvm::*;
-  `include "uvm_macro.svh"
+  import uvm_pkg::*;
+  `include "uvm_macros.svh"
 
   `include "agent/tb_sequencer.svh"
   `include "agent/tb_driver.svh"
@@ -9,4 +9,6 @@ package tb_pkg;
 
   `include "env/tb_scoreboard.svh"
   `include "env/tb_env.svh"
+
+  `include "tests/tb_baseline_test.svh"
 endpackage

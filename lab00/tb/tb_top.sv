@@ -1,10 +1,9 @@
 module tb_top;
   
-  import uvm::*;
+  import uvm_pkg::*;
   `include "uvm_macros.svh"
-  import tb_pkg::*;
 
   initial begin
-    run_test();
+    run_test("tb_baseline_test");
   end
 endmodule
