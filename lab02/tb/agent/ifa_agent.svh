@@ -20,7 +20,7 @@ class ifa_agent extends uvm_agent;
       adrv = ifa_driver::type_id::create("adrv", this);
     end
     
-    `uvm_info("agt-dbg", "build phase override", UVM_NONE)
+    `uvm_info("agtA-dbg", "build phase override", UVM_NONE)
   endfunction
 
   virtual function void connect_phase(uvm_phase phase);

@@ -28,6 +28,10 @@ class tb_env extends uvm_env;
 
   virtual function void end_of_elaboration_phase(uvm_phase phase);
     super.end_of_elaboration_phase(phase);
+
+    `uvm_info(get_type_name(), $sformat("ifa_agent0.is_active=: %s", ifa_agent0.is_active.name()), UVM_NONE)
+    `uvm_info(get_type_name(), $sformat("ifb_agent0.is_active=: %s", ifb_agent0.is_active.name()), UVM_NONE)
+
     uvm_top.print_topology();
   endfunction
 
