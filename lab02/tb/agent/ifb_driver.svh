@@ -1,5 +1,5 @@
 class ifb_driver extends uvm_driver;
-
+  `uvm_component_utils(ifb_driver)
   virtual tb_if vif;
   
   function new(string name, uvm_component parent);
